@@ -1,0 +1,303 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[3]",
+						"name": "_tokens",
+						"type": "address[3]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[3]",
+						"name": "amounts",
+						"type": "uint256[3]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minShares",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "balances",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"name": "calcWithdrawOneToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "dy",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fee",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVirtualPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[3]",
+						"name": "minAmountsOut",
+						"type": "uint256[3]"
+					}
+				],
+				"name": "removeLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256[3]",
+						"name": "amountsOut",
+						"type": "uint256[3]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "shares",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minAmountOut",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidityOneToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "j",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dx",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minDy",
+						"type": "uint256"
+					}
+				],
+				"name": "swap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "dy",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tokens",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"removeLiquidityOneToken(uint256,uint256,uint256)": {
+					"params": {
+						"i": "Token to withdraw",
+						"minAmountOut": "Minimum amount of token i that must be withdrawn",
+						"shares": "Shares to burn"
+					}
+				},
+				"swap(uint256,uint256,uint256,uint256)": {
+					"params": {
+						"dx": "Token in amount",
+						"i": "Index of token in",
+						"j": "Index of token out",
+						"minDy": "Minimum token out"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"removeLiquidityOneToken(uint256,uint256,uint256)": {
+					"notice": "Withdraw liquidity in token i"
+				},
+				"swap(uint256,uint256,uint256,uint256)": {
+					"notice": "Swap dx amount of token i for token j"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StableSwap.sol": "StableSwap"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StableSwap.sol": {
+			"keccak256": "0x8831b0233d13af2b6cdd6bc04d584559045cbedf808b574318435ee93837fe7b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9db3270f6fd04492aa378fd4b6e24e29705ce65a4e391f5897582709d8a8b2a7",
+				"dweb:/ipfs/QmbUkYqZWadFsx1BoGqkRfmkNa9noZE1TaJV8oN2eSWaD4"
+			]
+		}
+	},
+	"version": 1
+}
